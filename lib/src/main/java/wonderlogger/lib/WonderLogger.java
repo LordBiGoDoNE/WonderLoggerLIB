@@ -1,8 +1,6 @@
 package wonderlogger.lib;
 
-public abstract class AbsWonderLogger {
-    WonderLoggerFactory wonderLoggerFactory;
-    Class<?> javaClass;
+public interface WonderLogger {
 
-    public abstract void loggarException(Exception ex);
+    public void logException(Throwable ex);
 }

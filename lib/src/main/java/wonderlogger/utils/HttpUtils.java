@@ -1,43 +1,42 @@
 package wonderlogger.utils;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import org.apache.http.HttpHeaders;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import wonderlogger.model.vo.PostResponse;
+
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class HttpUtils {
 
-    public static boolean sendPost(URL pUrl, String pJson) {
+    public static PostResponse sendPost(String pStringURL, String pJson) {
+        HttpPost httpPost = new HttpPost(pStringURL);
+
         try {
-            HttpURLConnection con = (HttpURLConnection) pUrl.openConnection();
-            con.setRequestMethod("POST");
-            con.setRequestProperty("Content-Type", "application/json; utf-8");
-            con.setRequestProperty("Accept", "application/json");
-            con.setDoOutput(true);
-
-            try (OutputStream os = con.getOutputStream()) {
-                byte[] input = pJson.getBytes("utf-8");
-                os.write(input, 0, input.length);
-            }
-
-            try (BufferedReader br = new BufferedReader(
-                    new InputStreamReader(con.getInputStream(), "utf-8"))) {
-                if(con.getResponseCode() != 200){
-                    return false;
-                }
-                StringBuilder response = new StringBuilder();
-                String responseLine = null;
-                while ((responseLine = br.readLine()) != null) {
-                    response.append(responseLine.trim());
-                }
-
-                System.out.println(response.toString());
-            }
-        } catch (Exception ex) {
-            return false;
+            httpPost.setEntity(new StringEntity(pJson));
+        } catch (UnsupportedEncodingException e) {
+            return new PostResponse(false, e);
         }
-        
-        return true;
+
+        httpPost.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
+
+        return sendPost(httpPost);
     }
+
+    public static PostResponse sendPost(HttpPost pHttpPost) {
+        try (CloseableHttpResponse response = HttpClients.createDefault().execute(pHttpPost)) {
+            boolean sucess = response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
+            String responseBody = EntityUtils.toString(response.getEntity(), StandardCharsets.UTF_8);
+
+            return new PostResponse(sucess, responseBody);
+        } catch (IOException ioEX) {
+            return new PostResponse(false, ioEX);
+        }
+    }
+
 }

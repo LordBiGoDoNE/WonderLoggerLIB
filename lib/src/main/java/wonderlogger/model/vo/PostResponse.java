@@ -1,4 +1,4 @@
-package wonderlogger.vo;
+package wonderlogger.model.vo;
 
 public class PostResponse {
     private boolean sucess;

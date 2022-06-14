@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f366b24d-70a1-4958-966c-6493e22b67d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wonderlogger/lib/WonderLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wonderlogger/lib/WonderLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wonderlogger/lib/WonderLoggerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wonderlogger/lib/WonderLoggerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wonderlogger/model/vo/ImportExceptionRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wonderlogger/model/vo/ImportExceptionRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wonderlogger/model/vo/PostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wonderlogger/model/vo/PostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wonderlogger/utils/GsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wonderlogger/utils/GsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wonderlogger/utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wonderlogger/utils/HttpUtils.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="29qMZZ0VmGP5cmyjrABTJKwUnsn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Rafael/Desktop/WonderLoggerLIB/lib"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f366b24d-70a1-4958-966c-6493e22b67d8" name="Changes" comment="" />
+      <created>1653836218671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653836218671</updated>
+    </task>
+    <servers />
+  </component>
+</project>
